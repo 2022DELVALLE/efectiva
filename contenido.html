@@ -1,0 +1,213 @@
+<div class="header">
+    <img loading="lazy" srcset="../Logo.png" class="logo" />
+    <div class="logout-button">Cerrar Sesión</div>
+</div>
+<div class="content">
+    <img loading="lazy" srcset="../Logo-Efectiva.png" class="main-logo" />
+    <div class="upload-section">
+        <img loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/b627fa45d46c5c0722f28543ae56edba11f2e8ccfe742f6d290fa1cb8a212352?"
+            class="upload-icon" />
+        <div class="upload-text">Agregar Archivos</div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Nombre del archivo</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Maria</td>
+                <td>12345678A</td>
+                <td>Contract.pdf</td>
+                <td><a href="ruta/al/archivo/Contract.pdf" download>Descargar</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Juan</td>
+                <td>87654321B</td>
+                <td>Invoice.pdf</td>
+                <td><a href="ruta/al/archivo/Invoice.pdf" download>Descargar</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Antonia</td>
+                <td>11111111C</td>
+                <td>CV.pdf</td>
+                <td><a href="ruta/al/archivo/CV.pdf" download>Descargar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(229, 232, 235, 1);
+        padding: 12px 40px;
+        background-color: #fff;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .logo {
+        width: 31px;
+    }
+
+    .logout-button {
+        background-color: #009963;
+        border-radius: 12px;
+        padding: 10px 16px;
+        font-family: Inter, sans-serif;
+        cursor: pointer;
+    }
+
+    .content {
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 16px;
+        background-color: #fff;
+        border-radius: 12px;
+    }
+
+    .main-logo {
+        width: 288px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .upload-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 28px;
+        background-color: #009963;
+        border-radius: 12px;
+        padding: 10px 16px;
+        color: #fff;
+        font-weight: 800;
+        max-width: 180px;
+        margin-left: auto;
+        cursor: pointer;
+        /* Añadir cursor pointer */
+    }
+
+    .upload-icon {
+        width: 24px;
+        margin-right: 8px;
+    }
+
+    .upload-section:hover {
+        color: #ffffff;
+        background-color: #3e91df;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px 20px;
+        text-align: left;
+    }
+
+    .table th {
+        background-color: #f9f9f9;
+        color: #555;
+        border-bottom: 2px solid #ddd;
+        font-weight: bold;
+    }
+
+    .table tbody tr {
+        background-color: #fff;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .table td {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table a {
+        color: #A1824A;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .table a:hover {
+        text-decoration: underline;
+        color: #3e91df;
+    }
+
+    .table tbody tr td:nth-child(1),
+    .table tbody tr td:nth-child(3) {
+        color: #A1824A;
+        font-weight: bold;
+    }
+
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        
+
+        .logout-button {
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 10px;
+
+        }
+
+        .upload-section {
+            width: 90%;
+            justify-content: space-between;
+            
+        }
+
+        .table th,
+        .table td {
+            padding: 8px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .upload-section {
+            max-width: none;
+        }
+
+        .upload-icon {
+            width: 20px;
+        }
+
+        .upload-text {
+            font-size: 14px;
+        }
+
+        .table th,
+        .table td {
+            font-size: 14px;
+            padding: 6px;
+        }
+    }
+</style>

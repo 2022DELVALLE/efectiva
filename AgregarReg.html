@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Emergente</title>
+</head>
+
+<body>
+
+    <button id="openModalBtn">Abrir Modal</button>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <h2>Agregar Registro</h2>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="file">Archivo (WORD & PDF)</label>
+                    <div class="file-selector">
+                        <button class="file-button">Seleccionar Archivo</button>
+                        <span class="file-info">Ningún archivo seleccionado</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-save">Guardar</button>
+                <button class="btn btn-cancel" id="cancelBtn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('openModalBtn').onclick = function () {
+            document.getElementById('myModal').style.display = 'flex';
+        };
+
+        document.getElementById('closeBtn').onclick = function () {
+            document.getElementById('myModal').style.display = 'none';
+        };
+
+        document.getElementById('cancelBtn').onclick = function () {
+            document.getElementById('myModal').style.display = 'none';
+        };
+
+        window.onclick = function (event) {
+            if (event.target == document.getElementById('myModal')) {
+                document.getElementById('myModal').style.display = 'none';
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #009963;
+            color: white;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .close-btn {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .file-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .file-button {
+            background-color: #ccc8c8;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-save {
+            background-color: #2374ff;
+            color: white;
+        }
+
+        .btn-cancel {
+            background-color: #ff2323;
+            color: white;
+        }
+    </style>
+</body>
+
+</html>
